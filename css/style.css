@@ -1,0 +1,13 @@
+
+.contenedor{
+    width: 90%;
+    margin: auto;
+
+}
+.characters{
+    display: flex;
+    flex-wrap: wrap;
+}
+.dropdown-item{
+    cursor: pointer;
+}
