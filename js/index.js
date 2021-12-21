@@ -1,6 +1,8 @@
 
 const cards = document.querySelector('.characters')
 const loading = document.querySelector('#spinner')
+
+
 const fetch_characters= async () => {
     
     
@@ -44,6 +46,8 @@ const fetch_characters= async () => {
     
 }
 
+
+
 const fetch_episodes = async () =>{
 
     const response_episodes = await fetch(`https://rickandmortyapi.com/api/episode`)
@@ -51,7 +55,9 @@ const fetch_episodes = async () =>{
 
     const {results} = episodes
     cards.innerHTML=''
+
     loading.classList.remove('d-none')
+
 
     setTimeout(()=>{
             
@@ -60,13 +66,13 @@ const fetch_episodes = async () =>{
             
             cards.innerHTML += `
     
-            <div class="card col-5 mb-3 ms-5">
+            <div class="card col-5 mb-3 ms-5 bg-image">
                 <div class="card-body">
                     <h5> ${episodes.name} </h5>
                 </div>
-                <div class="card-body d-flex justify-content-between">
+                <div class="card-body ">
                     ${episodes.air_date}
-                   <p> Episode:  ${episodes.id} </p>
+                   <p class="text-white"> Episode:  ${episodes.id} </p>
                 </div>
                 
             </div>
